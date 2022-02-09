@@ -1,0 +1,193 @@
+/* This file is the CSS file for Assign08.html */
+
+body {
+  margin: 0;
+}
+
+header {
+  top: 0;
+  text-align: center;
+  background-image: url("images/music.jpg");
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+#headerText {
+  padding: 2% 0;
+}
+
+#personalInfo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 8fr repeat(6, 1fr);
+}
+
+.first {
+  grid-row: 1 / 2;
+}
+
+.last {
+  grid-row: 2 / 3;
+}
+
+.address {
+  grid-row: 3 / 4;
+}
+
+#address {
+  align-self: stretch;
+}
+
+.phone {
+  grid-row: 4 / 5;
+}
+
+.leftLabel {
+  grid-column: 2 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.rightForm {
+  grid-column: 3 / 4;
+  align-self: center;
+}
+
+#productsDiv {
+  grid-row: 5 / 6;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.product {
+  flex-basis: 40%;
+  margin: .5rem;
+}
+
+.productInfo {
+  border: 2px solid rgb(148, 136, 136);
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.productImage {
+  max-width: 100%;
+}
+
+#guitarPic {
+  width: 70%;
+}
+
+#pianoPic {
+  width: 79%;
+}
+
+.totalInfo {
+  grid-row: 6 / 7;
+}
+
+#totalError {
+  grid-column: 4 / 5;
+}
+
+#productsTotal {
+  grid-column: 2 / 4;
+  justify-self: center;
+  font-size: 1.5rem;
+}
+
+.cardType {
+  grid-row: 7 / 8;
+}
+
+#cardTypeError {
+  grid-column: 4 / 5;
+}
+
+#cardTypes {
+  grid-column: 2 / 4;
+  justify-self: center;
+  align-self: center;
+}
+
+.creditCard {
+  grid-row: 8 / 9;
+}
+
+.exp {
+  grid-row: 9 / 10;
+}
+
+#reset {
+  grid-row: 10 / 11;
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+#validate {
+  grid-row: 10 / 11;
+  grid-column: 3 / 4;
+  align-self: center;
+}
+
+.errorDiv {
+  padding: 0 2rem;
+  grid-column: 4 / 5;
+  justify-self: left;
+  align-self: center;
+  color: red;
+  font-size: 1.5rem;
+}
+
+#cardTypeError, #totalError {
+  padding: 0;
+}
+
+footer {
+  padding: 2% 0;
+  width: 100%;
+  background-color: black;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-left: 2%;
+}
+
+footer a:active {
+  color: black;
+  background-color: white;
+}
+
+@media only screen and (min-width: 950px) {
+  #personalInfo {
+    grid-template-rows: repeat(4, 1fr) 3fr repeat(6, 1fr);
+  }
+  
+  #productsDiv {
+    flex-wrap: nowrap;
+  }
+
+  .product {
+    flex-basis: 25%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #personalInfo {
+    grid-template-rows: repeat(4, 1fr) 22fr repeat(6, 1fr);
+  }
+
+  .product {
+    flex-basis: 100%;
+  }
+
+  footer {
+    padding: 4% 0;
+  }
+}

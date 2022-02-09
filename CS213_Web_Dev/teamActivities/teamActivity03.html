@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <style> /* #0 */
+    body { font-size:36px; background-color: black; font-family: 'Times New Roman', Times, serif;}
+
+    h1,h2,h3{ color:whitesmoke;  text-align: center; border-radius: 50%; text-shadow: 3px 3px 10px fuchsia,2px 2px 25px
+      turquoise;}
+
+    #title h1{font-family: 'Lucida Sans', 'Lucida Sans Regular'; background-color: black;color: white ; text-shadow: 2px
+      2px 5px blue, 0 0 25px white; font-size: 3em;}
+    #title p{font-family: cursive;}
+    p{color: palevioletred; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';}
+    .document{width: 70%; display: flex; flex-direction: column; padding: 6px; }
+    .content{ background-color: rgba(0,0,0,0);}
+    p:hover{background-color: white; color: black; border-style:dotted;}
+    p a{ color:rgb(4, 13, 145); background-color: white; border-radius: 10%; border-style: double;}
+    #menuBar{
+        position: fixed;right: 50px; top: 10px;color: white; background-color: rgba(0,0,0,1);}
+    #menuBarList:hover {cursor: pointer;}
+    .menuBarItem{
+        color: pink;
+        text-align: center;
+        border: 5px solid purple;
+        border-radius: 30%;
+        margin: 3px;
+    }
+
+    .menuBarItem:hover{
+        background-color: purple;
+        font-size: 38px;
+    }
+    a:active{background-color: whitesmoke; border-radius: 25%;}
+    a{color: white; }
+    a:hover{ color: turquoise; font-size: 38px; font-family: monospace;}
+    </style>
+    
+    <style> /* #1 */
+    body { font-size:16px; background-color: rgba(172, 255, 47, 0.842);}
+    ul{ list-style: none; }
+    #menuBar {position: absolute; top: 0px; right:10%; left:10%;  padding: 10px; font-size: 2em;}
+    p, #bottom{text-align: center; font-family:'Courier New', Courier, monospace; font-size: 2em; color:darkblue;
+        font-weight: bold;}
+    #menuBarList li{display:inline-block; padding: 0px 20px; font-size: 1em; color: orangered}
+    #menuBarList li a{ transition: all 0.3s ease 0s;}
+    #menuBarList:hover {cursor: pointer;}
+    #title{ margin-top: 60px; }
+    h1, h3 { text-align: end; margin-right: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif; font-size: 4em; font-style:italic; color: red}
+    #menuBarList li:hover { background-color:red; color:white;}
+    a{color: white; text-shadow: 2px 2px black;}
+    </style>
+
+    <style> /* #2 */
+    body { font-size:18px; background-color: orange;}
+    .document {margin-left: 150px;}
+    #menuBar{ border-width:1em; border-color:red; position:fixed;left: 20px; top:10px;}
+    #menuBarList{
+        position: fixed; color: yellow; list-style-type: none; font-size: 18px;
+        height: 100%; width: 150px; margin: 0; padding: 0; overflow: auto; text-shadow:2px 2px 4px black;
+    }
+    #menuBarList:hover{cursor: pointer;}
+    .menuBarItem:hover{color:orangered;}
+    .content, #title, #bottom{width: 50%; display: flex; flex-direction: column; padding: 6px; text-align:center;}
+    h1, h3{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 3em; color:yellow; 
+    text-shadow:2px 2px 5px black;}
+    .content, #bottom, p{font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:darkgreen;}
+    a{color:darkgreen; text-decoration:none;}
+    a:visited {color: yellow; text-shadow: 2px 2px 4px black;}
+    </style>
+    
+    <style> /* #3 */
+    body { font-size:18px; background-color: rgb(0, 255, 255, 0.2); text-align: center; }
+    .document {margin-bottom: 200px;}
+    #menuBar {position: fixed; bottom:0px; width:100%; font-size:2em; 
+        background-color:rgb(0, 255, 255, 0.2)}
+    #menuBarList li{display:inline-block; padding: 0px 20px; font-size: 1em; color: rgb(4, 21, 167);}
+    #menuBarList:hover {cursor: pointer;}
+    .content #title #bottom {font-family: fantasy; width:75%;}
+    h1, h3 {text-shadow: 2px 2px 4px lightgreen; font-family: cursive; font-size: 3em;}
+    #weekNumber {font-size: 3em; color: black; transition: font-size 2s, color 2s;}
+    #weekNumber:hover {font-size: 4em; color: white;}
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 03 : CSS</title>
+</head>
+<body onload="disableStyles()">
+<div class="document">
+    <div id="title">
+        <h1 id="weekNumber">Week 03 : CSS</h1>
+        <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+    </div> <!--title -->
+    <div class="content">
+        <div id="menuBar">
+            <ul id="menuBarList">
+                <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+                <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+                <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+                <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+                <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+            </ul>
+        </div> <!-- menuBar -->
+        <div id="text">
+            <h1>Select the Stylesheet</h1>
+            <p>There are four stylesheets that you may select from. Each one will change the coloring, fonts,
+                and even the layout of the page.You can change the layout of this page by selecting different
+                stylesheets in the menu, or by selecting one of the following links:<br>
+                <a href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
+                <a href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
+                <a href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
+                <a href="#" onclick="applyStyle(3)">Stylesheet 4</a>.
+            </p>
+            <h1>Instructions</h1>
+            <p>For all stylesheets, Jeffery, Claudia, and Jayden each participated with style and design change ideas
+                and they worked together to get the CSS code to do what we wanted it to do.
+            </p>
+            <p>Stylesheet 1 will provide a black background with background-color property. Each paragraph has a hover
+             property to change the background of that paragraph to white. We also used the color property to change the
+             font color. Each of the titles were given a different shadow effect with font-shadow properties. Using two
+             font-shadow values for each title gave both a hard and soft shadow to each one. We used a fixed position
+             for the menu bar. We applied a color property, a text-align property, a border property, a border-radius
+             property, and a margin property for the menuBarItem id. For the menuBarItem class, we added a hover
+             effect that changed the background to purple and the font size to 38 pixels. We also set a flex value for
+             the document class's display property.</p>
+
+            <p>Stylesheet 2 changes the background to a specified rgba value with background-color property. We removed
+                the styling form the list items in the menu bar. We set the menu bar to be aligned centered at the top 
+                of the page, and made them line up horizontally with the display property.We changed the alignment of the
+                subject headings to a right justified alignment and centered all other text. We added a shadow to the
+                hyperlinks and set the menu to change the background and text color on hover. All text size was modified, 
+                increasing the size and italicizing the subject headings. The fonts were changed for all text on the page
+                as well. 
+              
+            </p>
+            <p>
+                Stylesheet 3 changes the background to a predefined color with the background-color property. The 
+                list that makes up the menu was modified to remove the bullet points, and was given a fixed position
+                in the upper left corner of the page. We aligned all other text as centered, then gave it a padding to 
+                prevent it intersecting with the menu. This also made it more responsive to viewport size changes.
+                We modified the cursor settings so that it will produce the poining hand cursor when hovering over the 
+                menu links. We changed the font size of the titles. We also changed the font of the paragraph
+                content, as well as its size. We added a text shadow to the titles and menu. We removed the bullet points
+                from the menu and the underlines form the hyperlinks. We changed the colors of all text as well. 
+            </p>
+            <p>
+                Stylesheet 4 changes
+            </p>
+        </div> <!-- text -->
+        <div id="sidebar">
+            <h3>Grading</h3>
+            <p>In order to get full credit for this assignment, you will need to demonstrate what you have learned
+                and how you helped your classmates. This means your contribution needs to be briefly described
+                on the page.</p>
+        </div> <!--sidebar -->
+    </div> <!-- content -->
+    <div id="bottom">This assignment submitted by Jeffery Johnson, Claudia Madrid, and Jayden Thomas </div>
+</div> <!-- document -->
+
+<script>
+    <!-- DISABLE STYLES: This function turns off the four stylesheets -->
+    function disableStyles()
+    {
+        document.styleSheets[0].disabled = true;
+        document.styleSheets[1].disabled = true;
+        document.styleSheets[2].disabled = true;
+        document.styleSheets[3].disabled = true;
+    }
+    <!-- APPLY STYLES: This function turns off all four stylesheets, then turns one back on -->
+    function applyStyle(i)
+    {
+        disableStyles();
+        document.styleSheets[i].disabled = false;
+    }
+</script>
+</body>
+</html>

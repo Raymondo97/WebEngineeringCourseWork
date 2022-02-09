@@ -1,0 +1,27 @@
+/* 
+This CSS document unifies the design and layout of the footer for all websites
+The footer for these websites includes the link to return to index.html 
+*/
+
+body {
+    margin: 0;
+}
+
+footer {
+    padding: 2% 0;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: white;
+    margin-left: 2%;
+  }
+  
+  footer a:active {
+    color: black;
+    background-color: white;
+  }

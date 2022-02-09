@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="assign08.css">
+<script src="assign08.js"></script>
+
+<title>Product Purchase | Music Mania</title>
+
+</head>
+<body>
+
+<header>
+<div id="headerText">
+<h1>Music Mania</h1>
+<h2>The place for all your music needs</h2>
+<h3>Please enter your information, and which products you would like to purchase:</h3>
+</div>
+</header>
+
+<form id="personalInfo" onsubmit="return validateForm()" onreset="resetFunction()">
+  <label for="first_name" class="first leftLabel">First Name:</label>
+  <input type="text" name="first_name" id="first_name" class="first rightForm" 
+    onblur="validateInputs(0)">
+  <div class="errorDiv first inputErrorDiv" id="firstError"></div>
+  <label for="last_name" class="last leftLabel">Last Name:</label>
+  <input type="text" name="last_name" id="last_name" class="last rightForm" 
+    onblur="validateInputs(1)">
+  <div class="errorDiv last inputErrorDiv" id="lastError"></div>
+  <label for="address" class="address leftLabel">Address:</label>
+  <textarea name="address" id="address" class="address rightForm" 
+    onblur="validateInputs(2)"></textarea>
+  <div class="errorDiv address inputErrorDiv" id="addressError"></div>
+  <label for="phone" class="phone leftLabel">Phone Number:</label>
+  <input type="tel" name="phone" id="phone" class="phone rightForm" oninput="phoneFunction()"
+    pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" maxlength="12" placeholder="###-###-####" 
+    onblur="validateInputs(3)">
+  <div class="errorDiv phone inputErrorDiv" id="phoneError"></div>
+
+  <div id="productsDiv">
+    <figure id="item_0" class="product">
+      <div class="productInfo">
+        <img src="images/guitar.jpg" alt="Guitar Pic" id="guitarPic" class="productImage">
+        <p>Guitar $<span id="guitarPrice">79.99</span></p>
+      </div>
+      <label for="guitarQty">Quantity: </label>
+      <input type="number" id="guitarQty" class="quantityInput" value="0"
+        onchange="totalPrice()" onblur="validateQuantities()">
+    </figure>
+    <figure id="item_1" class="product">
+      <div class="productInfo">
+        <img src="images/piano.jpg" alt="Piano Pic" id="pianoPic" class="productImage">
+        <p>Piano $<span id="pianoPrice">89.99</span></p>
+      </div>
+      <label for="pianoQty">Quantity: </label>
+      <input type="number" id="pianoQty" class="quantityInput" value="0"
+        onchange="totalPrice()" onblur="validateQuantities()">
+    </figure>
+    <figure id="item_2" class="product">
+      <div class="productInfo">
+        <img src="images/trumpet.jpg" alt="Trumpet Pic" id="trumpetPic" class="productImage">
+        <p>Trumpet $<span id="trumpetPrice">199.99</span></p>
+      </div>
+      <label for="trumpetQty">Quantity: </label>
+      <input type="number" id="trumpetQty" class="quantityInput" value="0"
+        onchange="totalPrice()" onblur="validateQuantities()">
+    </figure>
+    <figure id="item_3" class="product">
+      <div class="productInfo">
+        <img src="images/drums.jpg" alt="Drums Pic" id="drumsPic" class="productImage">
+        <p>Drums $<span id="drumsPrice">299.99</span></p>
+      </div>
+      <label for="drumsQty">Quantity: </label>
+      <input type="number" id="drumsQty" class="quantityInput" value="0"
+        onchange="totalPrice()" onblur="validateQuantities()">
+    </figure>
+  </div>
+  <div id="productsTotal" class="totalInfo">
+    <p>Total: <span id="total"></span></p>
+  </div>
+  <div class="totalInfo errorDiv" id="totalError"></div>
+
+  <div id="cardTypes" class="cardType">
+  <input type="radio" name="card" id="visa" onblur="validateRadios()">
+    <label for="visa">Visa</label>
+  <input type="radio" name="card" id="mastercard" onblur="validateRadios()">
+    <label for="mastercard">Mastercard</label>
+  <input type="radio" name="card" id="amEx" onblur="validateRadios()">
+    <label for="amEx">American Express</label>
+  </div>
+  <div id="cardTypeError" class="cardType errorDiv"></div>
+
+  <label for="credit_card" class="creditCard leftLabel">Credit Card #: </label>
+  <input type="text" name="credit_card" id="credit_card" oninput="creditFunction()"
+    pattern="((\d{4})\s?){4}" placeholder="#### #### #### ####" 
+    maxlength="19" class="creditCard rightForm" onblur="validateInputs(4)">
+  <div class="errorDiv card inputErrorDiv" id="creditError"></div>
+  <label for="exp_date" class="exp leftLabel">Expiration Date: </label>
+  <input type="text" name="exp_date" id="exp_date" class="exp rightForm"
+    pattern="\d{2}\/\d{4}" placeholder="mm/yyyy" maxlength="7" oninput="expFunction()">
+  <div class="errorDiv exp inputErrorDiv" id="expError" onblur="validateInputs(5)"></div>
+
+  <button type="reset" name="reset" id="reset">Reset</button>
+  <input type="submit" name="validate" id="validate" value="Submit">
+</form>
+
+<footer>
+<a href="../index.html">CS213 Assignments</a>
+</footer>
+
+</body>
+</html>

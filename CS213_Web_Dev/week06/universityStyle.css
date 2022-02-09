@@ -1,0 +1,118 @@
+/* This document is the style sheet for the Week 6 assignment */
+
+:root {
+  --navbar-height: 1%;
+  --column-width: 12%;
+  --footer-height: 1.5%;
+  --color1: rgb(204, 160, 48);
+  --color2: rgb(0, 42, 105);
+}
+
+body {
+  margin: 0;
+}
+
+#navbar {
+  background-color: var(--color1);
+  color: white;
+  padding: var(--navbar-height) 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  font-size: 3vw;
+}
+
+#uLogo {
+  float: left;
+  position: relative;
+  width: 7vw;
+  padding-left: 30px;
+  padding-top: 1%;
+  padding-bottom: 10px;
+}
+
+#univTitle {
+  display: inline-block;
+  padding-left: 30px;
+  color: var(--color2);
+}
+
+#siteNav {
+  float: right;
+  padding: 10px;
+  padding-top: 2%;
+  color: var(--color2);
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--color2);
+  padding: var(--navbar-height) 5px;
+}
+
+.navLink:hover {
+  background-color: var(--color2);
+  color: white;
+}
+
+.navLink:active {
+  background-color: rgb(0, 74, 185);
+  color: white;
+}
+
+footer {
+  width: 100%;
+  padding: var(--footer-height) 0px;
+  bottom: 0;
+  background-color: var(--color2);
+  z-index: 98;
+  position: relative;
+  font-size: 3vw;
+}
+
+footer a {
+  color: white;
+  padding: 0 1vw;
+}
+
+#mainContent p, #mainContent figcaption {
+  font-size: 2vw;
+}
+
+@media only screen and (min-width: 950px) {
+  #mainContent {
+    padding-top: calc(var(--navbar-height) * 9);
+  }
+  
+  #navbar, footer {
+      font-size: 2vw;
+  }
+
+  #uLogo {
+    width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #navbar, footer {
+    font-size: 4vw;
+  }
+
+  #uLogo {
+    width: 8vw;
+    padding-top: 3%;
+  }
+
+  #siteNav {
+    padding-top: 5%;
+  }
+
+  #univTitle {
+    display: none;
+  }
+
+  #mainContent p, #mainContent figcaption {
+    font-size: 4vw;
+  }
+}

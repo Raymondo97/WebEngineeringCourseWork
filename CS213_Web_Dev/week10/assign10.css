@@ -1,0 +1,41 @@
+/* This is the CSS document for part 2 of week 10 */
+
+#mainContent {
+    padding: 0 10%;
+}
+
+#fileDisplay {
+    padding: 7.5% 0;
+    width: 100%;
+}
+
+#title {
+    text-align: center;
+}
+
+.lineItem {
+    width:  100%;
+    margin: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 2%;
+}
+
+.lineItem:hover {
+    background-color: lightgray;
+}
+
+#filePath {
+    text-align: center;
+}
+
+.fileInfo {
+    padding: 2.5% 0%;
+}
+
+.itemLink {
+    padding: 0;
+}

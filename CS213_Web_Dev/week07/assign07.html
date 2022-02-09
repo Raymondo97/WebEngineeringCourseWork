@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Week 07 Assignment</title>
+
+<link rel="stylesheet" href="week07.css">
+<script src="week07.js"></script>
+
+</head>
+<body>
+<div id="mainContent">
+<h2>Loan Calculator</h2>
+<p>Use this webtool to calculate your loans.</p>
+
+<form id="paymentForm">
+  <label for="apr" class="formLabel aprForm" id="aprLabel">Annual Percentage Rate (0-25.00%):</label>
+  <input name="apr" type="number" id="apr" class="dataForm aprForm" onchange="validateApr()">
+  <div id="aprDiv" class="formDiv"></div>
+  <label for="term" class="formLabel termForm" id="termLabel">Loan Term (Years):</label>
+  <input name="term" type="number" id="term" class="dataForm termForm" onchange="validateTerm()">
+  <div id="termDiv" class="formDiv"></div>
+  <label for="amount" class="formLabel amountForm" id="amountLabel">Loan Amount (Dollars):</label>
+  <input name="amount" type="number" id="amount" class="dataForm amountForm">
+  <div id="amountDiv" class="formDiv"></div>
+
+  <button type="reset" id="clear" onclick="clearDivs()">Reset</button>
+  <button type="button" onclick="doPayment()" id="calculate">Calculate Payment</button>
+  <div id="formsDiv" class="formDiv"></div>
+</form>
+
+<p id="paymentParagraph">Monthly Payment: <span id="payment"></span></p>
+
+</div>
+
+<footer>
+  <a href="../index.html">CS213</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* This CSS document is for the assign04 webpage. */
+
+:root {
+    --navbar-height: 2%;
+    --column-width: 12%;
+    --footer-height: 1.5%;
+}
+
+body {
+    margin: 0;
+    background-image: radial-gradient(rgb(244, 250, 250), cyan);
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#disclaimer {
+  color: grey;
+}
+
+#navbar {
+    background-color: green;
+    padding: var(--navbar-height) 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+#homeLogo {
+    text-decoration: none;
+    color: white;
+    float: left;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: large;
+}
+
+#homeLogo:hover {
+    text-shadow: 2px 2px black;
+    background-color: rgb(3, 184, 3);
+}
+
+#navLinks {
+    float: right;
+    font-family: sans-serif;
+    color: white;
+}
+
+.navRef {
+    text-decoration: none;
+    color: white;
+    padding: calc(var(--navbar-height) * 2.5) 5px;
+}
+
+.navRef:hover {
+    background-color: darkgreen;
+    color: black;
+}
+
+.navRef:active {
+    background-color: darkgreen;
+    color: white;
+}
+
+#pageContent {
+    padding-top: calc(var(--navbar-height) * 2.2);
+    padding-left: calc(var(--column-width) + 1%);
+    padding-right: calc(var(--column-width) + 1%);
+    padding-bottom: calc(var(--footer-height) * 2.2);
+}
+
+#leftColumn {
+    width: var(--column-width);
+    height: 100%;
+    position: fixed;
+    left: 0;    
+    padding-top: calc(var(--navbar-height) * 3);
+    z-index: 97;
+}
+
+#rightColumn {
+    width: var(--column-width);
+    height: 100%;
+    position: fixed;
+    right: 0;    
+    padding-top: calc(var(--navbar-height) * 3);
+    z-index: 97;
+}
+
+#documentFooter {
+    width: 100%;
+    padding: var(--footer-height) 0px;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    z-index: 98;
+    position: relative;
+}
+
+#pageContent p {
+    text-align: center;
+}

@@ -1,0 +1,171 @@
+/* This is the CSS file for week07 assignment */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#mainContent {
+  padding: 5% 12%;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p, label, input, button, a, .formDiv, #formsDiv {
+  font-size: 1.25rem;
+}
+
+#paymentParagraph {
+  font-size: 1.75rem;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 2vw 0;
+  width: 100%;
+  background-color: black;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: red;
+}
+
+footer a:active {
+  background-color: red;
+  color: black;
+}
+
+#paymentForm {
+  display: grid;
+  border: 1px  solid black;
+  padding: 1vw 2vw;
+  gap: 1vw 0;
+  grid-template-rows: repeat(13, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.formLabel {
+  justify-self: left;
+}
+
+.formDiv {
+  justify-self: center;
+  color: red;
+  text-shadow: 0 0 1px black;
+}
+
+#aprLabel {
+  grid-row: 2 / 3;
+}
+
+#apr {
+  grid-row: 3 / 4;
+}
+
+#aprDiv {
+  grid-row: 4 / 5;
+}
+
+#termLabel {
+  grid-row: 5 / 6;
+}
+
+#term {
+  grid-row: 6 / 7;
+}
+
+#termDiv {
+  grid-row: 7 / 8;
+}
+
+#amountLabel {
+  grid-row: 8 / 9;
+}
+
+#amount {
+  grid-row: 9 / 10;
+}
+
+#amountDiv {
+  grid-row: 10 / 11;
+}
+
+#clear {
+  grid-row: 11 / 12;
+}
+
+#calculate {
+  grid-row: 12 / 13;
+}
+
+#formsDiv {
+  color: red;
+  text-shadow: 0 0 1px black;
+  justify-self: center;
+  grid-row: 13 / 14;
+}
+
+@media only screen and (min-width: 860px) {
+  #paymentForm {
+    display: grid;
+    padding: 1vw 2vw;
+    gap: 1vw 3vw;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .formLabel {
+    grid-column: 1 / 2;
+    justify-self: right;
+  }
+  
+  .formDiv, .dataForm, #calculate {
+    grid-column: 2 / 3;
+  }
+  
+  .aprForm {
+    grid-row: 2 / 3 !important;
+  }
+  
+  .termForm {
+    grid-row: 4 / 5 !important;
+  }
+  
+  .amountForm {
+    grid-row: 6 / 7 !important;
+  }
+  
+  #aprDiv {
+    grid-row: 3 / 4;
+  }
+  
+  #termDiv {
+    grid-row: 5 / 6;
+  }
+  
+  #amountDiv {
+    grid-row: 7 / 8;
+  }
+
+  #clear {
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+  }
+  
+  #calculate {
+    grid-row: 8 / 9;
+  }
+  
+  #formsDiv {
+    grid-row: 9 / 10;
+    grid-column: 1 / 3;
+  }
+}

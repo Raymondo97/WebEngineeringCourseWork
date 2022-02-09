@@ -1,0 +1,90 @@
+/* This document is the style sheet for the Week 5 assignment */
+
+:root {
+  --navbar-height: 2%;
+  --column-width: 12%;
+  --footer-height: 1.5%;
+}
+
+body {
+  margin: 0;
+}
+
+#navbar {
+  background-color: green;
+  color: white;
+  padding: var(--navbar-height) 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  padding: calc(var(--navbar-height) * 1) 5px;
+}
+
+.navLink:hover {
+  background-color: darkgreen;
+  color: black;
+}
+
+.navLink:active {
+  background-color: darkgreen;
+  color: white;
+}
+
+#pageContent {
+  padding-top: calc(var(--navbar-height) * 2.2);
+  padding-left: calc(var(--column-width) + 1%);
+  padding-right: calc(var(--column-width) + 1%);
+  padding-bottom: calc(var(--footer-height) * 2.2);
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  padding: var(--footer-height) 0px;
+  bottom: 0;
+  background-color: black;
+  z-index: 98;
+  position: relative;
+}
+
+footer a {
+  color: white;
+  padding: 0 1vw;
+}
+
+#navbar, footer {
+  font-size: 3vw;
+}
+h1 {
+  font-size: 8vw;
+}
+p, figcaption {
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 950px) {
+  #navbar, footer {
+      font-size: 2vw;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #navbar, footer {
+    font-size: 4vw;
+  }
+  h1 {
+    font-size: 8vw;
+  }
+  p, figcaption {
+    font-size: 1em;
+  }
+}

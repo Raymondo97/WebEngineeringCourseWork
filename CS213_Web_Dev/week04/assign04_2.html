@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="assign04.css">
+
+<style>
+#localNav a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+#localNav a:hover {
+  color: darkslategrey;
+  text-decoration: darkslategrey underline;
+}
+
+#localNav a:active {
+  color: darkgrey;
+  text-decoration: darkgrey underline;
+}
+
+.consoleContent {
+  text-align: center;
+  border: 1px solid black;
+  margin: 75px 0;
+}
+
+.consoleContent:hover {
+  cursor: pointer;
+}
+
+.consoleContent p {
+  font-size: larger;
+}
+
+.consolePicture {
+  width: 75%;
+  max-width: 400px;
+  padding: 0px 50px;
+}
+
+.inPageLink {
+  position: relative;
+  top: -60px;
+}
+
+#leftColumn {
+  background-color: darkcyan;
+}
+</style>
+
+<title>Consoles</title>
+
+</head>
+<body>
+<div id="documentMain">
+
+<header id="documentHeader">
+<div id="navbar">
+  <a href="assign04.html" id="homeLogo">Video Game Sales</a>
+<nav id="navLinks">
+  <a href="assign04.html" class="navRef">Home</a> |
+  <a href="assign04_2.html" class="navRef">Consoles</a> |
+  <a href="../index.html" class="navRef">CS213 Assignments</a>
+</nav>
+</div>
+</header>
+
+<div id="leftColumn">
+  <nav id="localNav">
+    <a href="#switch">Switch</a><br>
+    <a href="#xbox">Xbox</a><br>
+    <a href="#playstation">Playstation</a><br>
+    <a href="#pc">PC</a>
+  </nav>
+</div>
+
+<div id="rightColumn">
+</div>
+
+<div id="pageContent">
+
+<h1>Shop by Consoles</h1>
+<p>Search for games by popular console.</p>
+<p id="disclaimer">
+  NOTE: Websites for console specific games not fully developed.</p>
+
+<div id="consoleList">
+  <div id="switch" class="inPageLink"></div>
+  <div class="consoleContent">
+    <img src="pictures/nintendoswitch.png" alt="Nintendo Switch Console"
+    class="consolePicture">
+    <p>Nintendo Switch</p>
+  </div>
+
+  <div id="xbox" class="inPageLink"></div>
+  <div class="consoleContent">
+    <img src="pictures/xbox.jpg" alt="Xbox Console"
+    class="consolePicture">
+    <p>Xbox</p>
+  </div>
+
+  <div id="playstation" class="inPageLink"></div>
+  <div class="consoleContent">
+    <img src="pictures/playstation.jpg" alt="Playstation Console"
+    class="consolePicture">
+    <p>Playstation</p>
+  </div>
+
+  <div id="pc" class="inPageLink"></div>
+  <div class="consoleContent">
+    <img src="pictures/pc.jpg" alt="Gaming PC"
+    class="consolePicture">
+    <p>Gaming PC</p>
+  </div>
+</div>
+
+</div>
+
+<footer id="documentFooter">
+<p>This content is not owned by the creator of this site.</p>
+</footer>
+
+</div>
+</body>
+</html>

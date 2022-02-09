@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJAX Coding</title>
+
+<link rel="stylesheet" href="assign09.css">
+<link rel="stylesheet" href="../exitLink.css">
+<script src="assign09.js"></script>
+
+</head>
+<body>
+<div id="mainContent">
+  <h1>Welcome to our AJAX Website!</h1>
+<div id="part1">
+
+<p>Please choose from one of the following countries.
+  Data regarding the 10 largest cities will be displayed to your screen.
+</p>
+
+<form id="countrySelect">
+  <span class="countrySpan">
+    <input type="radio" name="country" id="usa" class="country" value="usa" onclick="selectCountry('usa')">
+      <label for="usa">United States</label>
+  </span>
+  <span class="countrySpan">
+    <input type="radio" name="country" id="canada" class="country" onclick="selectCountry('canada')">
+      <label for="canada">Canada</label>
+  </span>
+  <span class="countrySpan">
+    <input type="radio" name="country" id="mexico" class="country" onclick="selectCountry('mexico')">
+      <label for="mexico">Mexico</label>
+  </span>
+  <span class="countrySpan">
+    <input type="radio" name="country" id="russia" class="country" onclick="selectCountry('russia')">
+      <label for="russia">Russia</label>
+  </span>
+</form>
+
+<div id="countryDataDiv"></div>
+</div>
+
+<div id="part2">
+
+<div id="inputDiv">
+<p>Please enter the filename or URL of a JSON file: </p>
+<input id="fileInput" class="inputField" type="text" value="json.txt">
+<button type="button" class="inputField" onclick="getFileData()">Display Data</button>
+</div>
+
+<div id="studentDataDiv"></div>
+</div>
+</div>
+
+<footer>
+  <a href="../index.html">CS213 Assignments</a>
+</footer>
+
+</body>
+</html>

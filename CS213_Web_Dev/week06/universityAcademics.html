@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Webpage for academic achievements and awards">
+
+<title>Academics | University University</title>
+
+<link rel="stylesheet" href="universityStyle.css">
+<link rel="stylesheet" href="subpageStyle.css">
+
+<style>
+#mainContent {
+  grid-template-columns: 1fr 2fr 3fr 2fr 1fr;
+  grid-template-rows: 15vw .75fr 1fr 1fr;
+}
+
+#informationText {
+  grid-column: 2 / span 3;
+  grid-row: 2;
+}
+
+#informationText p {
+  font-size: 1.25rem;
+}
+
+#studentGraph {
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 2;
+}
+
+#studentGraph img {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 950px) {
+  #informationText p {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #mainContent {
+    grid-template-rows: 15vw .5fr .75fr .75fr;
+  }
+
+  #informationText p {
+    font-size: 1rem;
+  }
+}
+</style>
+
+</head>
+<body>
+<div id="navbar">
+  <a id="logoLink" href="universityUniversity.html">
+    <img id="uLogo" src="images/uLogo.png" alt="University Logo">
+  </a>
+  <p id="univTitle">University University</p>
+  <nav id="siteNav">
+    <a class="navLink" href="universityUniversity.html">Home</a> | 
+    <a class="navLink" href="universityAcademics.html">Academics</a> | 
+    <a class="navLink" href="universityAthletics.html">Athletics</a> | 
+    <a class="navLink" href="universityArts.html">Arts</a> 
+  </nav>
+</div>
+  
+<div id="mainContent">
+
+<header id="pageHeader">
+  <h1 id="headerText">Academics</h1>
+</header>
+
+<div id="informationText">
+  <p>Here at University University, we strive to help our students achieve academic success. 
+    We have committed faculty and staff members. Our programs, certificates and degrees
+    are nationally ranked among the best universities. Below, you will find data taken from a
+    recent poll measuring students core class achievements.
+  </p>
+</div>
+
+<div id="studentGraph">
+  <img src="images/studentSuccessGraph.png" alt="Student Academic Success Poll">
+</div>
+  
+</div>
+
+<footer>
+  <a href="../index.html">CS213</a>
+</footer>
+  
+</body>
+</html>

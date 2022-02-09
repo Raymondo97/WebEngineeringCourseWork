@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Webpage for athletic programs">
+
+<link rel="stylesheet" href="universityStyle.css">
+<link rel="stylesheet" href="subpageStyle.css">
+
+<title>Athletics | University University</title>
+
+<style>
+  #mainContent {
+    grid-template-columns: 1fr 2fr 3fr 2fr 1fr;
+    grid-template-rows: 15vw .5fr .75fr .75fr;
+  }
+
+  #leftColumn {
+    background-image: linear-gradient(var(--color2), var(--color1));
+    left: 0;
+    z-index: 97;
+    grid-row: 2 / -1;
+    grid-column: 1;
+  }
+
+  #miniNavDiv {
+    position: sticky;
+    top: 12vw;
+    font-size: 2vw;
+  }
+
+  .miniNavLink {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    text-decoration: none;
+  }
+
+  .sportImage {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  #footballDiv {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+    text-align: center;
+  }
+
+  #soccerDiv {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+    text-align: center;
+  }
+
+  #volleyballDiv {
+    grid-column: 2 / span 3;
+    grid-row: 4;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 950px) {
+    #miniNavDiv {
+      top: 9vw;
+    }
+  }
+
+  @media only screen and (max-width: 599px) {
+    #mainContent {
+      grid-template-columns: 1fr 2fr 3fr 2fr 1fr;
+      grid-template-rows: 15vw .8fr 1fr 1fr;
+    }
+    
+    #miniNavDiv {
+      top: 16vw;
+      font-size: 3vw;
+    }
+  }
+</style>
+
+</head>
+<body>
+<div id="navbar">
+  <a id="logoLink" href="universityUniversity.html">
+    <img id="uLogo" src="images/uLogo.png" alt="University Logo">
+  </a>
+  <p id="univTitle">University University</p>
+  <nav id="siteNav">
+    <a class="navLink" href="universityUniversity.html">Home</a> | 
+    <a class="navLink" href="universityAcademics.html">Academics</a> | 
+    <a class="navLink" href="universityAthletics.html">Athletics</a> | 
+    <a class="navLink" href="universityArts.html">Arts</a> 
+  </nav>
+</div>
+  
+<div id="mainContent">
+
+<header id="pageHeader">
+  <h1 id="headerText">Athletics</h1>
+</header>
+
+<div id="leftColumn">
+  <div id="miniNavDiv">
+    <nav id="miniNav">
+      <a class="miniNavLink" href="#footballPic">Football</a><br>
+      <a class="miniNavLink" href="#soccerPic">Soccer</a><br>
+      <a class="miniNavLink" href="#volleyballPic">Volleyball</a>
+    </nav>
+  </div>
+</div>
+
+<div id="footballDiv">
+  <img id="footballPic" class="sportImage" src="images/football.jpg" alt="Football on Field">
+  <p>Our football team is nationally ranked. All team members are taught the principals of integrity, responsibility, 
+    and accountability. Students are held to a high standard of academic excellence in order to participate.
+  </p>
+</div>
+
+<div id="soccerDiv">
+  <img id="soccerPic" class="sportImage" src="images/soccer.jpg" alt="Soccer on Field">
+  <p>Like our football team, our soccer team members are also held to a high standard in their schooling. 
+    University University's soccer team is newly founded, starting with the Fall 2021 semester. 
+    Students involved are making history and setting the standard for the future of the team.
+  </p>
+</div>
+
+<div id="volleyballDiv">
+  <img id="volleyballPic" class="sportImage" src="images/volleyball.jpg" alt="Volleyball on Court">
+  <p>A high standard of class work is also a part of our volleyball team. We have both mens and womens
+    volleyball teams. Both teams have competed on a national level, and intend to keep with that goal.
+  </p>
+</div>
+
+</div>
+
+<footer>
+  <a href="../index.html">CS213</a>
+</footer>
+
+</body>
+</html>

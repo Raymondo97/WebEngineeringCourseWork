@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jayden Thomas's Homepage</title>
+
+<link rel="stylesheet" href="assign03.css">
+
+<style>
+    table {
+        text-align: center; border: 1px solid black; border-collapse: collapse; width: 100%;
+    }
+  
+    th, td {
+        border: 1px solid black;
+    }
+
+    #mainTitle {
+        font-family: cursive;
+        font-size: 24px;
+        transition: .4s;
+    }
+
+    .headerLinks {
+        font-family: fantasy;
+        font-size: 16px;
+        transition: .4s;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+</style>
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("navbar").style.padding = "10px";    
+    document.getElementById("mainTitle").style.fontSize = "14px";
+    document.getElementsByClassName("headerLinks").style.fontSize = "10px";
+
+  } else {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("mainTitle").style.fontSize = "24px";
+    document.getElementsByClassName("headerLinks").style.fontSize = "16px";
+  }
+}
+</script>
+
+</head>
+<body>
+<div id="pageContainer">
+
+<header id="navbar">
+  <h1 id="mainTitle">Welcome to Jayden Thomas's Home Page</h1>
+  <a href="../index.html" class="headerLinks">CS 213 Assignments</a>
+  <a href="https://byui.instructure.com/" class="headerLinks secondaryLinks">I-Learn</a>
+</header>
+
+<div id="contentWrap">
+    
+<div>
+  <img class="image" src="IMG_0004.JPG" alt="Tron Baymax">
+</div>
+
+<a id="info"></a>
+<div>
+  <p style="color: green;">
+  My name, as shown above, is <strong>Jayden Thomas</strong>.<br>
+  I am from Lehi, <i>Utah</i>, United States.<br>
+  My major is currently Applied Technology.<br>
+  </p>
+</div>
+
+<figure style="margin-top: 50px;">
+  <blockquote cite="https://speeches.byu.edu/talks/lynn-g-robbins/be-100-percent-responsible/" 
+  style="font-family: sans-serif; background-color: lightgrey;">
+  "Agency and responsibility are inseparably connected. 
+  You cannot avoid responsibility without also diminishing agency."
+  </blockquote>
+  <figcaption>--Lynn G. Robbins, <cite>Be 100 Percent Responsible</cite></figcaption>
+</figure>
+
+<table style="margin-top: 50px;">
+  <tr>
+    <th>Course #</th>
+    <th>Course Description</th>
+    <th>Sec #</th>
+    <th>Class Time</th>
+    <th>Class Location</th>
+  </tr>
+  <tr>
+    <td>CS 213</td>
+    <td>Web Engineering 1</td>
+    <td>N/A</td>
+    <td>Always</td>
+    <td>Anywhere</td>
+  </tr>
+  <tr>
+    <td>CS 246</td>
+    <td>Software Design and Development</td>
+    <td>N/A</td>
+    <td>Always</td>
+    <td>Anywhere</td>
+  </tr>
+</table>
+
+<br><hr>
+<a id="questions"></a>
+<div>
+  <label>Type name here: </label>
+  <input id="nameInput" type="text" size="25" />
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</div>
+
+<div>
+  <label for="toppingInput">Type favorite pizza toppings here: </label>
+  <textarea id="toppingInput" rows="6" cols="20"></textarea>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</div>
+
+<div>
+  <p>Which is your favorite programming language?</p>
+  <ul style="list-style: none;">
+    <li><input id="Javascript" type="radio" name="favLanguage">
+      <label for="Javascript">Javascript</label></li>
+    <li><input id="HTML" type="radio" name="favLanguage">
+      <label for="HTML">HTML</label></li>
+    <li><input id="CSS" type="radio" name="favLanguage">
+      <label for="CSS">CSS</label></li>
+    <li><input id="Other" type="radio" name="favLanguage">
+      <label for="Other">Other</label></li>
+  </ul>
+</div>
+
+<div>
+  <p>Which of the following movies have you seen?</p>
+  <ul style="list-style: none;">
+    <li><input type="checkbox" id="MP"><label for="MP">Monte Python: Quest for the Holy Grail</label></li>
+    <li><input type="checkbox" id="NL"><label for="NL">Nacho Libre</label></li>
+    <li><input type="checkbox" id="ND"><label for="ND">Napolean Dynamite</label></li>
+  </ul>
+</div>
+
+<div>
+  <label for="colorsMenu">Please choose from the following colors: </label>
+  <select id="colorsMenu">
+    <option>Select Color...</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
+    <option value="yellow">Yellow</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="indigo">Indigo</option>
+    <option value="violet">Violet</option>
+  </select>
+</div>
+
+<!-- Close main document area -->
+</div>
+
+<footer>
+  <a href="#top" id="backToTop">
+    <img src="Brick_Block.png" alt="Back to Top" style="width: 35px;">
+  </a>
+  <a href="#info" class="footerLinks">Info</a>
+  <a href="#questions" class="footerLinks secondaryLinks">Questions</a>
+</footer>
+
+</div>
+
+</body>
+</html>

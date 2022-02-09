@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Week 07 Assignment</title>
+<script>
+    function doPayment() {
+        /* Defining Table:
+        * Input: Principal, Rate, Years, Periods per year
+        * Processing:
+        * 1. Convert all answers to numbers
+        * 2. Store all inputs in variable
+        * 3. Call computePayment function to get payment amount
+        * 4. Store payment in variable
+        * 5. Print result to user
+        * Output: Payment amount
+        */
+
+        // 1. Convert all answers to numbers
+        // 2. Store all inputs in variable
+        let princ = parseFloat(document.getElementById("prin").value),
+        rate = parseFloat(document.getElementById("aRate").value),
+        numYears = parseFloat(document.getElementById("numYear").value),
+        pPerY = parseFloat(document.getElementById("periodsPY").value);
+
+        // 3. Call computePayment function to get payment amount
+        // 4. Store payment amount in variable
+        let paym = computePayment(princ, rate, numYears, pPerY);
+        
+        // 5. Print result to user
+        document.getElementById("firstDiv").innerHTML = "$" + paym;
+    }
+
+    function doBalance() {
+        /* Defining Table:
+        * Input: Principal, Rate, Years, Periods per year, Balance
+        * Processing:
+        * 1. Convert all answers to numbers
+        * 2. Store all inputs in variable
+        * 3. Call computeBalance function to get balance amount
+        * 4. Store balance in variable
+        * 5. Print result to user
+        * Output: Balance amount
+        */
+
+        // 1. Convert all answers to numbers
+        // 2. Store all inputs in variable
+        let princ = parseFloat(document.getElementById("prin").value),
+        rate = parseFloat(document.getElementById("aRate").value),
+        numYears = parseFloat(document.getElementById("numYear").value),
+        pPerY = parseFloat(document.getElementById("periodsPY").value),
+        bal = parseFloat(document.getElementById("paidToDate").value);
+
+        // 3. Call computeBalance function to get balance amount
+        // 4. Store balance in variable
+        let balance = computeBalance(princ, rate, numYears, pPerY, bal);
+        
+        // 5. Print result to user
+        document.getElementById("secondDiv").innerHTML = "$" + balance;
+    }
+
+    function computePayment(principal,
+    annualRate, years, periodsPerYear) {
+        /* Defining Table:
+        * Input: Above arguments
+        * Processing:
+        * 1. Create variable for payment amount
+        * 2. Calculate the interest rate per period
+        * 3. Add one to the previous answer
+        * 4. Calculate the number of periods through the life of the loan
+        * 5. Multiply interest rate by the power of the negated previous answer
+        * 6. Subtract result from 1
+        * 7. Multiply the loan amount by the interest rate
+        * 8. Divide product by step 6's answer
+        * 9. Return the overall answer
+        * Output: Payment Amount
+        */
+
+        // 1. Create variable for payment amount
+        let payAm;
+
+        // 2. Calculate the interest rate per period
+        let intRate = annualRate / periodsPerYear;
+
+        // 3. Add one to the previous answer
+        // 4. Calculate the number of periods through the life of the loan
+        // 5. Multiply interest rate by the power of the negated previous answer
+        payAm = Math.pow((1 + intRate), -(periodsPerYear * years));
+
+        // 6. Subtract result from 1
+        // 7. Multiply the loan amount by the interest rate
+        // 8. Divide product by step 6's answer
+        payAm = (principal * intRate) / (1 - payAm);
+
+        // 9. Return the overall answer
+        return payAm.toFixed(2);
+    }
+
+    function computeBalance(principal,
+    annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
+        /* Defining Table:
+        * Input: Above arguments
+        * Processing:
+        * 1. Create variable for balance amount
+        * 2. Calculate interest rate per period and store in variable
+        * 3. Calculate payment per period using computePayment function
+        * 4. Store previous answer in variable
+        * 5. Add one to the interest rate per period
+        * 6. Multiply answer by the power of the payments paid to date
+        * 7. Store product in variable called partCal
+        * 8. Subtract one from partCal
+        * 9. Multiply result by payment per period
+        * 10. Divide product by interest rate
+        * 11. Multiply loan amount by partCal
+        * 12. Subtract step 10's answer by the previous result
+        * 13. Return the overall answer
+        * Output: Balance Amount
+        */
+
+        // 1. Create variable for balance amount
+        let balAm;
+
+        // 2. Calculate interest rate per period and store in variable
+        let intRate = annualRate / periodsPerYear;
+        
+        // 3. Calculate payment per period using computePayment function
+        // 4. Store previous answer in variable
+        let payPerPeriod = computePayment(principal, annualRate, years, periodsPerYear);
+
+        // 5. Add one to the interest rate per period
+        // 6. Multiply answer by the power of the payments paid to date
+        // 7. Store product in variable called partCal
+        let partCal = Math.pow((1 + intRate), numberOfPaymentsPaidToDate);
+
+        // 8. Subtract one from partCal
+        // 9. Multiply result by payment per period
+        // 10. Divide product by interest rate
+        balAm = (payPerPeriod * (partCal - 1)) / intRate;
+
+        // 11. Multiply loan amount by partCal
+        // 12. Subtract step 10's answer by the previous result
+        balAm = (principal * partCal) - balAm;
+
+        // 13. Return the overall answer
+        return balAm.toFixed(2);
+    }
+</script>
+</head>
+<body>
+<h2>Loan Calculator</h2>
+<p>Use this webtool to calculate your loans.</p>
+<p>Amount Borrowed (principal): <input type="text" id="prin" size="4"><br>
+Annual Interest Rate (example: 0.06): <input type="text" id="aRate" size="3"><br>
+Number of Years: <input type="text" id="numYear" size="2"><br>
+Payments per Year: <input type="text" id="periodsPY" size="2"><br>
+<button type="button" onclick="doPayment()">Compute Payment</button></p>
+<div id="firstDiv"></div>
+<p>Number of Payments Paid to Date: <input type="text" id="paidToDate" size="2"><br>
+<button type="button" onclick="doBalance()">Compute Payoff Amount</button></p>
+<div id="secondDiv"></div>
+</body>
+</html>

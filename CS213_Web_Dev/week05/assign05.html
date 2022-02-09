@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="assign05.css">
+
+<title>Jayden's Portfolio | Homepage</title>
+
+<style>
+
+#pageStartView {
+  z-index: 97;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 15px black;
+}
+
+#backgroundPicture {
+ width: 100%;
+ opacity: 90%;
+ position: absolute;
+ padding-top: calc(var(--navbar-height) * 2.2);
+}
+
+#postHeaderContent {
+  padding-top: 10vw;
+}
+
+.projectImage {
+  max-width: 100%;
+  height: auto;
+}
+
+#projectDisplay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.projectLinks {
+  flex-basis: 50%
+}
+
+@media only screen and (min-width: 950px) {
+  #postHeaderContent {
+  padding-top: 15vw;
+  }
+  
+  #projectDisplay {
+    flex-wrap: nowrap;
+  }
+  
+  .projectLinks {
+    flex-shrink: 1;
+    flex-basis: 25%
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #postHeaderContent {
+  padding-top: 5vw;
+  }
+  
+  .projectLinks {
+    flex-basis: 100%
+  }
+}
+
+#description p {
+  text-align: justify;
+}
+
+#familyDiv img {
+  max-width: 75%;
+}
+</style>
+
+</head>
+<body>
+<div id="navigationDiv">
+<nav id="navbar">
+  <a class="navLink" href="assign05.html">Home</a> | 
+  <a class="navLink" href="assign05_2.html">About Me</a> | 
+  <a class="navLink" href="assign05_3.html">Contact Me</a>
+</nav>
+</div>
+
+<div id="backgroundDiv">
+<img id="backgroundPicture" src="codeBackground.png" alt="">
+</div>
+
+<div id="pageContent">
+<div id="pageStartView">
+<header>
+<h1>Hello there!<br>
+  Welcome to Jayden's Portfolio</h1>
+  
+  <p>Aspiring Programmer and problem solving champ<br>
+  Scroll down to see some of my work!</p>
+</header>
+</div>
+
+<div id="postHeaderContent">
+  <div id="projectDisplay">
+    <a class="projectLinks">
+    <figure>
+      <img class="projectImage" src="webDevPic.jpg" alt="Website Development Image">
+      <figcaption>Website Development</figcaption>
+    </figure>
+    </a>
+
+    <a class="projectLinks">
+    <figure>
+      <img class="projectImage" src="asteroidsPic.png" alt="Python Image">
+      <figcaption>Python Game</figcaption>
+    </figure>
+    </a>
+
+    <a class="projectLinks">
+    <figure>
+      <img class="projectImage" src="pythonPic.png" alt="Python Code">
+      <figcaption>Python Code Project</figcaption>
+    </figure>
+    </a>
+
+    <a class="projectLinks">
+    <figure>
+      <img class="projectImage" src="javaPic.png" alt="Java Image">
+      <figcaption>Java Application</figcaption>
+    </figure>
+    </a>
+  </div>
+</div>
+
+<div id="description">
+  <p>
+    My name is Jayden Thomas. I have always loved technology.
+    It is a lot of fun to play with new devices and softwares. 
+    It's especially enjoyable because of how easy it is for me to 
+    quickly understand the ins and outs of new technologies.
+    I had heard about coding and programming when I was younger.
+    While in high school, I participated in a movement called Hour of Code.
+    It taught coding on a very basic level. I really enjoyed it! 
+    Since then, I was excited to learn more coding and programming.
+    I have now been able to code in Java, HTML, CSS, Javascript,
+    Python, and Excel VBA. 
+  </p>
+</div>
+
+<div id="familyDiv">
+  <h1>My Family</h1>
+  <img src="familyPic.jpg" alt="Family Photo">
+</div>
+
+</div>
+
+<footer>
+  <a href="../index.html">Return to CS213 Assignments</a>
+</footer>
+
+</body>
+</html>
